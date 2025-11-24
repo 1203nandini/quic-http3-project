@@ -1,0 +1,13 @@
+🧠 What I Observed:
+
+✔ No TCP SYN/SYN-ACK handshake
+✔ QUIC starts with Client Hello & TLS 1.3 encryption
+✔ Then switches to 1-RTT data mode
+✔ Streams run independently → no HOL blocking
+✔ Faster than TCP on local tests
+
+
+🧠 QUIC Handshake Flow (Simple)
+Client → Initial Packet + Client Hello
+Server → Handshake Packet + Server Hello
+QUIC → Switch to 1-RTT mode (data starts immediately!)
